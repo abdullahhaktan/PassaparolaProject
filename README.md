@@ -122,3 +122,6 @@ Follow these steps to set up and run the project locally:
 5.  **Running the Project:**
     * Run the project in Visual Studio (**F5**).
     * The application will start automatically.
+
+
+<img width="956" height="395" alt="Ekran görüntüsü 2025-10-11 170130" src="https://github.com/user-attachments/assets/ed6a30da-e847-4c3a-9025-4707b75d4d5a" />
