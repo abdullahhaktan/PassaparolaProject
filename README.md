@@ -53,7 +53,8 @@ Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izl
 
 4.  **Veri Kaynağı Ayarları:**
     * Proje, harici bir veritabanı kullanıyorsa, bağlantı dizesini projenin ayarlar dosyasında (`App.config` veya `appsettings.json`) güncelleyin.
-    * *(Not: Soruların yer aldığı veri dosyasının/veritabanının doğru şekilde yüklendiğinden emin olun.)*
+    * *(Not: Soruların yer aldığı veri dosyasının/veritabanının doğru şekilde yüklendiğinden emin olun. Gerekl
+      i DB yi ve tabloları manuel olarak oluşturabilirsiniz)*
 
 5.  **Projeyi Çalıştırma:**
     * Projeyi Visual Studio'da çalıştırın (F5).
@@ -113,7 +114,7 @@ Follow these steps to set up and run the project locally:
 
 4.  **Data Source Configuration:**
     * If the project uses an external database, update the connection string in the project's settings file (`App.config` or `appsettings.json`).
-    * *(Note: Ensure the data file/database containing the questions is correctly loaded.)*
+    * *(Note: Ensure the data file/database containing the questions is correctly loaded. you can create the relevant DB and add the tables)*
 
 5.  **Running the Project:**
     * Run the project in Visual Studio (F5).
