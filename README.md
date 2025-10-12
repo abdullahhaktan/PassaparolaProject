@@ -14,7 +14,7 @@
 
 ## 💻 Proje Hakkında
 
-Bu proje, popüler **Passaparola bilgi yarışması** formatını temel alarak geliştirilmiş bir masaüstü veya web uygulamasıdır. Kullanıcıların belirli bir süre içinde alfabedeki harflere karşılık gelen soruları yanıtlamasını amaçlar. Proje, temel programlama mantığı ve kullanıcı etkileşimi becerilerini sergilemektedir.
+Bu proje, popüler **Passaparola bilgi yarışması** formatını temel alarak geliştirilmiş bir masaüstü uygulamasıdır. Kullanıcıların girdiği cevapların doğru olup olmadığına göre kontrol yapılır.
 
 ---
 
@@ -22,18 +22,18 @@ Bu proje, popüler **Passaparola bilgi yarışması** formatını temel alarak g
 
 ### Teknik Özellikler
 
-* **C# Programlama Dili**: Uygulamanın ana geliştirme dili.
-* **Kullanıcı Arayüzü**: Genellikle **Windows Forms** veya benzeri bir arayüz.
-* **Veri Yönetimi**: Sorular, bir veritabanı (LocalDB, Access vb.) veya harici bir dosya (XML, JSON) ile yönetilir. **Migrations (Göçler)** kullanılmamaktadır.
-* **Zaman Kontrolü**: Soruları yanıtlamak için geri sayım sayacı (Timer) mekanizması.
-* **Basit Oyun Mantığı**: Harflere göre soru atama, doğru/yanlış cevaba göre puanlama.
+* **Platform:** Windows Forms (Masaüstü Uygulaması)
+* **Dil:** C#
+* **Mantık:** Cevap kontrolü ve skor takibi, bir `switch-case` yapısı kullanılarak uygulanmıştır.
+* **Girdi Kontrolü:** Cevaplar, **Enter tuşu** basıldığında kontrol edilir.
+* **Durum Görselleştirme:** Cevap doğruysa ilgili harf düğmesi **Yeşil**, yanlışsa **Kırmızı** renge döner. Mevcut soruya ait harf düğmesi ise **Sarı** renkle vurgulanır.
 
 ### Kullanıcı / Oyun Özellikleri
 
-* **Harf Sistemi**: Alfabedeki harflere karşılık gelen sorular.
-* **Puanlama**: Doğru cevaplar için puan, yanlış cevaplar veya pas geçme için ceza/puansız geçiş.
-* **Oyun Döngüsü**: Tüm harfler bitene kadar veya süre dolana kadar devam eden oyun akışı.
-* **Sonuç Ekranı**: Oyun sonunda doğru, yanlış ve pas geçilen soruların sayısını gösterme.
+* **Soru Döngüsü:** Kullanıcı "Sonraki" düğmesine tıkladıkça sorular sırayla yüklenir.
+* **Anlık Skor:** Doğru ve Yanlış cevap sayıları anlık olarak görüntülenir.
+* **Cevap Kontrolü:** Cevaplar büyük/küçük harf duyarlılığı olmadan (`.ToLower()`) kontrol edilir ve bazı sorular için alternatif cevaplar kabul edilir (Örn: "akdeniz" veya "akdeniz bölgesi").
+
 
 ---
 
@@ -67,61 +67,62 @@ Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izl
 ---
 ---
 
-[EN]
+# 🎲 Passaparola Quiz Game (C# / Windows Forms or Similar)
 
-# PassaparolaProject
+---
 
 ## 💻 About the Project
 
-This project is a desktop or web application developed based on the popular **Passaparola quiz show** format. It aims to challenge users to answer questions corresponding to letters of the alphabet within a specific time limit. The project demonstrates fundamental skills in programming logic and user interaction.
+This project is a desktop application developed based on the popular **Passaparola quiz show** format. It checks the correctness of the answers entered by the users.
 
 ---
 
-## ✨ Core Features
+## ✨ Key Features
 
-### Technical Features
+### Technical Specifications
 
-* **C# Programming Language**: The main development language.
-* **User Interface**: Typically **Windows Forms** or a similar interface.
-* **Data Management**: Questions are managed via a database (LocalDB, Access, etc.) or an external file (XML, JSON). **Migrations** are not used.
-* **Time Control**: A countdown timer mechanism to answer questions.
-* **Basic Game Logic**: Question assignment based on letters, scoring based on correct/incorrect answers.
+* **Platform:** Windows Forms (Desktop Application)
+* **Language:** C#
+* **Logic:** Answer checking and score tracking are implemented using a `switch-case` structure.
+* **Input Control:** Answers are checked when the **Enter key** is pressed.
+* **Status Visualization:** If the answer is correct, the corresponding letter button turns **Green**; if incorrect, it turns **Red**. The button for the current question is highlighted in **Yellow**.
 
 ### User / Game Features
 
-* **Letter System**: Questions corresponding to the letters of the alphabet.
-* **Scoring**: Points for correct answers, penalties/passing with no score for incorrect or skipped answers.
-* **Game Flow**: The game continues until all letters are covered or the time runs out.
-* **Result Screen**: Displays the final count of correct, incorrect, and skipped questions.
+* **Question Cycle:** Questions are loaded sequentially as the user clicks the "Next" button.
+* **Instant Score:** The number of correct and incorrect answers is displayed instantly.
+* **Answer Validation:** Answers are checked without case sensitivity (`.ToLower()`), and alternative answers are accepted for some questions (e.g., "akdeniz" or "akdeniz bölgesi").
 
 ---
 
-### 🚀 How to Run
+### 🚀 How to Run?
 
-Follow these steps to set up and run the project locally:
+Follow the steps below to run this project in your local environment:
 
-1.  **Prerequisites:**
-    * **.NET Framework** (If a Windows Forms project) or **.NET SDK** (If an ASP.NET Core project).
-    * **[Visual Studio 2019/2022](https://visualstudio.microsoft.com/)** (Recommended).
+1.  **Requirements:**
+    * **.NET Framework** (If it's a Windows Forms project) or **.NET SDK** (If it's an ASP.NET Core project).
+    * **[Visual Studio 2019/2022](https://visualstudio.microsoft.com/)** (Recommended)
     * **SQL LocalDB / Access** (If used as a data source).
 
-2.  **Cloning the Project:**
+2.  **Clone the Project:**
     ```bash
     git clone [https://github.com/abdullahhaktan/PassaparolaProject.git](https://github.com/abdullahhaktan/PassaparolaProject.git)
     cd PassaparolaProject
     ```
 
-3.  **Installing Dependencies:**
+3.  **Install Dependencies:**
     * Open the project in Visual Studio.
     * Ensure all NuGet packages in the solution are restored (**Restore**).
 
-4.  **Creating the Data Source (REQUIRED MANUAL STEP):**
-    * Since **Migrations** are not used, if the application uses a database, it must be created manually (by running an SQL script or placing the database file).
-    * Check and update the data source connection string in the project's **settings file** (`App.config` or `appsettings.json`).
+4.  **Create Data Source (MANDATORY MANUAL STEP):**
+    * Since **Migrations** are not used, if the application uses a database, it is necessary to create this database manually (by running an SQL script or placing the database file).
+    * Open the project's **configuration file** (`App.config` or `appsettings.json`), check the data source connection string, and update it.
 
-5.  **Running the Project:**
+5.  **Run the Project:**
     * Run the project in Visual Studio (**F5**).
     * The application will start automatically.
+
+---
 
 
 <img width="956" height="395" alt="Ekran görüntüsü 2025-10-11 170130" src="https://github.com/user-attachments/assets/ed6a30da-e847-4c3a-9025-4707b75d4d5a" />
